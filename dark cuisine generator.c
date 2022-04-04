@@ -5,7 +5,7 @@ struct food
 {
     char str[20]; //name
     int no;  //number
-}a[100]={{" ",0}};  //initialize
+}a[100000]={{" ",0}};  //initialize
 
 int Get_Foodbank(food *a)
 {
@@ -38,10 +38,10 @@ int Generate_dishes(food *a,int n)
     srand(time(NULL));
     for(int i=1;i<n;i++)
     {
-            who=rand()%n+1;
+            who=rand()%n;
             printf("%s",a[who].str);
             printf("炒");
-            who=rand()%n+1;
+            who=rand()%n;
             puts(a[who].str);
     }
     return 0;
