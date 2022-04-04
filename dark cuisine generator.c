@@ -40,7 +40,7 @@ int Generate_dishes(food *a,int n)
     {
             who=rand()%n+1;
             printf("%s",a[who].str);
-            printf("_with_");
+            printf("炒");
             who=rand()%n+1;
             puts(a[who].str);
     }
@@ -52,5 +52,6 @@ int main()
 {
 	int n=Get_Foodbank(a);
 	Generate_dishes(a,n);
+	scanf("%d",&n);
 	return 0;
 }
