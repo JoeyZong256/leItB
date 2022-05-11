@@ -9,3 +9,8 @@
       update 随机生成制作方法引导
       update 能够生成菜肴的制作方式
       update 使得界面更加易于理解
+
+## ECUST TODO 选择困难症治疗器
+      update HTML主页设计
+      update CSS设计
+      update 字体设置完成
