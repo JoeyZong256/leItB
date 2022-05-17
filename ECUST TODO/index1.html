@@ -31,8 +31,6 @@
         <div class="spinner-grow text-primary" role="status"></div>
     </div>
 
-
-
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top py-lg-0
             px-lg-5 wow fadeIn" data-wow-delay="0.1s">
         <a href="index1.html" class="navbar-brand ms-4 ms-lg-0">
@@ -122,12 +120,12 @@
                             rounded overflow-hidden h-100">
                         <div class="text-center p-4">
                             <div class="d-inline-block border border-primary
-                                    rounded-pill px-3 mb-3">$11 - $99</div>
-                            <h3 class="mb-3">鸡腿饭</h3>
-                            <span>华理一食堂一楼</span>
+                                    rounded-pill px-3 mb-3" id="price1">$11 - $99</div>
+                            <h3 class="mb-3" id="name1">鸡腿饭</h3>
+                            <span id="address1">华理一食堂一楼</span>
                         </div>
                         <div class="position-relative mt-auto">
-                            <img class="img-fluid" src="static/picture/product-1.png" alt="">
+                            <img class="img-fluid" id="pic1" src="static/picture/product-1.png" alt="">
                             <div class="product-overlay">
                                 <a class="btn btn-lg-square
                                         btn-outline-light rounded-circle" href=""><i class="fa fa-eye
@@ -141,12 +139,12 @@
                             rounded overflow-hidden h-100">
                         <div class="text-center p-4">
                             <div class="d-inline-block border border-primary
-                                    rounded-pill pt-1 px-3 mb-3">$11 - $99</div>
-                            <h3 class="mb-3">咖喱猪排饭</h3>
-                            <span>华理一食堂一楼</span>
+                                    rounded-pill pt-1 px-3 mb-3" id="price2">$11 - $99</div>
+                            <h3 class="mb-3" id="name2">咖喱猪排饭</h3>
+                            <span id="address2">华理一食堂一楼</span>
                         </div>
                         <div class="position-relative mt-auto">
-                            <img class="img-fluid" src="static/picture/product-2.png" alt="">
+                            <img class="img-fluid" id="pic2" src="static/picture/product-2.png" alt="">
                             <div class="product-overlay">
                                 <a class="btn btn-lg-square
                                         btn-outline-light rounded-circle" href=""><i class="fa fa-eye
@@ -160,12 +158,12 @@
                             rounded overflow-hidden h-100">
                         <div class="text-center p-4">
                             <div class="d-inline-block border border-primary
-                                    rounded-pill pt-1 px-3 mb-3">$11 - $99</div>
-                            <h4 class="mb-3">黑胡椒牛肉饭</h4>
-                            <span>华理一食堂二楼</span>
+                                    rounded-pill pt-1 px-3 mb-3" id="price3">$11 - $99</div>
+                            <h4 class="mb-3" id="name3">黑胡椒牛肉饭</h4>
+                            <span id="address3">华理一食堂二楼</span>
                         </div>
                         <div class="position-relative mt-auto">
-                            <img class="img-fluid" src="static/picture/product-3.png" alt="">
+                            <img class="img-fluid" id="pic3" src="static/picture/product-3.png" alt="">
                             <div class="product-overlay">
                                 <a class="btn btn-lg-square
                                         btn-outline-light rounded-circle" href=""><i class="fa fa-eye
@@ -209,6 +207,67 @@
     <script src="static/js/main.js" type="0080e6b992b21508d4c0eeae-text/javascript"></script>
     <script src="static/js/rocket-loader.min.js" data-cf-settings="0080e6b992b21508d4c0eeae-|49" defer=""></script>
     <a href="#" style="display:none;"></a>
+
+    <script type="text/javascript" onload="">
+        let info = [
+            "铁板五花肉炒饭", "一食堂三楼DIY铁板拌饭", "15元",
+            "“华理路标”咖啡", "华理咖啡屋", "16元",
+            "咖喱鸡排饭", "一食堂三楼咖喱饭", "15元",
+            "黑椒里脊饭", "一食堂三楼DIY铁板拌饭", "15元",
+            "芝士肉酱拌饭", "一食堂三楼韩式拌饭", "15元",
+            "烤盘饭", "一食堂西餐厅韩式烤盘饭", "12-20元",
+            "黑椒香酥鸡", "一食堂一楼千岛香酥鸡", "16元",
+            "土豆牛腩煲仔饭", "一食堂三楼煲仔饭", "18元",
+            "牛肉饭", "二食堂二楼F+牛肉饭", "17元",
+            "石锅鱼片", "一食堂二楼特色石锅菜", "15元",
+            "香酥鸡腿饭", "一食堂三楼煲仔饭", "15元",
+            "咖喱脆皮鸡饭", "一食堂三楼炎炎脆皮鸡饭", "15元",
+            "金针菇黄焖鸡", "一食堂一楼黄焖鸡米饭", "15元",
+            "四级花酥", "花栗食社活动限定", "18.8元",
+            "面包一号", "一食堂三楼学府餐饮", "5元",
+            "面包二号", "一食堂三楼学府餐饮", "5元",
+            "饭包", "忆民韵活动自制", "免费",
+            "烧汁虾", "一食堂二楼烧汁虾米饭", "18元",
+            "大大大碗面", "一食堂二楼大大大碗粉/面", "10元",
+            "麻辣香锅", "一食堂一楼麻辣香锅", "20-50元",
+            "老鸭粉丝汤", "一食堂二楼老沪点", "13元",
+            "红糖发糕", "一卡司", "2元",
+            "奶黄包", "一卡司", "2元",
+            "炸鸡", "一卡司", "14元",
+            "铁板意面", "一食堂三楼DIY铁板拌饭", "15元",
+            "华理红烧肉", "各层打饭窗口", "8元",
+            "馄饨", "一食堂一楼阿香馄饨", "10元",
+            "麻辣烫", "一食堂三楼麻辣香锅", "12-40元",
+            "老母鸡汤+葱油饼", "一食堂三楼齐鲁牛肉汤", "10~13元",
+            "渔粉", "一卡司", "15元",
+            "水果", "同学果业/华兴水果店", "5-30元",
+            "草莓牛奶", "图书馆内小店", "10元",
+            "老成都红烧牛肉面", "一食堂三楼牛百碗", "17元",
+            "小笼包", "一食堂二楼老沪点", "7元",
+            "饺子", "一食堂二楼美润水饺", "12~18元",
+            "番茄小酥肉", "二食堂二楼猪肚鸡米饭", "15元",
+            "番茄油泼面", "一食堂三楼茄汁面", "15元",
+            "芝士奥尔良烤鸡排焗饭", "一卡司", "15元",
+            "鸡蛋仔", "一食堂一楼拾觉奶茶", "10元",
+        ]
+
+        window.onload = function generate() {
+            a = parseInt(Math.random() * 39) + 1;
+            document.getElementById('address1').innerHTML = info[3 * a - 2];
+            document.getElementById('price1').innerHTML = info[3 * a - 1];
+            document.getElementById('name1').innerHTML = info[3 * a];
+
+            a = parseInt(Math.random() * 39) + 1;
+            document.getElementById('address2').innerHTML = info[3 * a - 2];
+            document.getElementById('price2').innerHTML = info[3 * a - 1];
+            document.getElementById('name2').innerHTML = info[3 * a];
+
+            a = parseInt(Math.random() * 39) + 1;
+            document.getElementById('address3').innerHTML = info[3 * a - 2];
+            document.getElementById('price3').innerHTML = info[3 * a - 1];
+            document.getElementById('name3').innerHTML = info[3 * a];
+        }
+    </script>
 </body>
 
 </html>
